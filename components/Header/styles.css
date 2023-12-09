@@ -1,0 +1,112 @@
+.nav{
+    padding: 15px 0;
+    background: rgb(255, 255, 255, 70%);
+}
+.logo{
+    width: 50px;
+}
+.nav-icon, .nav-close, .nav-bgoverlay{
+    display: none;
+}
+.nav-wrapper{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+.nav-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-list li{
+    display: inline-block;
+    margin: 0 10px;
+}
+.nav-list .nav-link{
+    font-family: "semi-bold";
+    font-size: 18px;
+    color: #222831;
+    padding: 0.5rem;
+    transition: 0.3s;
+}
+.nav-list li:hover .nav-link{
+    color: #00ADB5;
+}
+.nav-listwrapper{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.sign-button a{
+    background: #00ADB5;
+    padding: 8px 18px;
+    font-family: "semi-bold";
+    font-size: 18px;
+    color: white;
+    border-radius: 12px;
+}
+@media only screen and (max-width:768px){
+    .btn{
+        padding: 8px 12px;
+    }
+}
+@media only screen and (max-width:768px){
+    .nav{
+        position: relative;
+    }
+    .nav-icon{
+        display: block;
+    }
+    .nav-icon svg,.nav-close svg{
+        height: 30px;
+        width: 30px;
+        pointer-events: none;
+    }
+    .nav-close{
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        color: #471b10;
+    }
+    .nav-list{
+        z-index: 1000;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        padding-right: 2rem;
+        width: 80%;
+        height: 100vh;
+        background-color: #db89ba;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        transform: translateX(0%);
+        transition: 0.3s ease-in transform;
+        overflow: hidden;
+    }
+    .nav-list.show{
+        transform: translateX(-100%);
+    }
+    .nav-list li{
+        display: block;
+        text-align: right;
+        margin-top: 20px;
+    }
+    .nav-list a{
+        font-size: 20px;
+    }
+    .nav-bgoverlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 1000;
+        background-color: rgb(18, 24, 14, 0.808);
+        display: none;
+    }
+    .nav-bgoverlay.active{
+        display: block;
+    }
+}
