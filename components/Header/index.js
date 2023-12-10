@@ -22,20 +22,20 @@ const Header = () => {
                             </svg>
                         </div>
                         <div className="sign-button">
-                            <Link href="https://barez.org/">
+                            <Link href="/signin">
                                 ثبت نام
                             </Link>
                         </div>
                         <div class="nav-listwrapper">
                             <li>
-                                <a href="index.html" class="nav-link">خانه</a>
+                                <Link href="/" class="nav-link">خانه</Link>
                             </li>
                             <li>
-                                <a href="menu.html" class="nav-link">قوانین و مقررات</a>
+                                <Link href="/league" class="nav-link">لیگ ها</Link>
                             </li>
                         </div>
                         <div className="logo">
-                            <Link href="https://barez.org/">
+                            <Link href="/">
                                 <img src="../../images/logo.png" alt="logo" />
                             </Link>
                         </div>
